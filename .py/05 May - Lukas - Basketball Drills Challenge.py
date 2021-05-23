@@ -15,11 +15,13 @@ def driveGrid(numMove):
     drivetrain.drive_for(FORWARD, 200 * numMove, MM)
 
 def level1():
+    #drive the 3 lengths
     for i in [1,2,4]:
         driveGrid(i)
         driveGrid(-i)
 
 def level2():
+    #drive the 3 lengths again but turn around
     for i in [1,2,4]:
         driveGrid(i)
         drivetrain.turn_to_rotation(180, DEGREES);
@@ -27,6 +29,7 @@ def level2():
         drivetrain.turn_to_rotation(0, DEGREES);
 
 def level3():
+    #do it all again but this time do all the lengths
     for i in range(1,9):
         driveGrid(i)
         drivetrain.turn_to_rotation(180, DEGREES);
